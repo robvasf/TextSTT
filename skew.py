@@ -28,40 +28,29 @@ def rotate(img, real_img):
         h_hists.append(score[1])
         v_hists.append(score[2])
     
-    # test
-    #print("Reduced:", ht, wd, "Real:", ht1, wd1)
     score_index = scores.index(max(scores))
-    
     h_hist_list = h_hists[score_index].tolist()
     v_hist_list = v_hists[score_index].tolist()
-    #for i in v_hist_list:
-    #    print(i)
     
     # Hor
     for i in range(len(h_hist_list)-1):
         h_dif = abs(h_hist_list[i+1]-h_hist_list[i])
         if 0.6 < h_dif:
-            #print("Limit i:", h_dif, i+1)
             h_ri = (i+1)*10
-            #print("Limit i:", h_ri)
             break
     
     h_hist_list_reversed = list(reversed(h_hist_list))
     for i in range(len(h_hist_list_reversed)-1):
         h_dif_reversed = abs(h_hist_list_reversed[i+1]-h_hist_list_reversed[i])
         if 0.6 < h_dif_reversed:
-            #print("Limit f:", h_dif_reversed, len(h_hist_list)-i+1)
             h_rf = (len(h_hist_list)-i+1)*10
-            #print("Limit f:", h_rf)
             break
     
     # Ver
     for i in range(len(v_hist_list)-1):
         h_dif = abs(v_hist_list[i+1]-v_hist_list[i])
         if 0.6 < h_dif:
-            #print("Limit i:", h_dif, i+1)
             v_ri = (i+1)*10
-            #print("Limit i:", v_ri)
             break
     
     v_hist_list_reversed = list(reversed(v_hist_list))
