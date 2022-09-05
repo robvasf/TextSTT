@@ -1,9 +1,7 @@
 import cv2 as cv
 import wx
-import tqdm
 import os
 import sys
-import numpy as np
 from glob import glob
 from skew import rotate
 from multiprocessing import Pool
