@@ -1,5 +1,5 @@
 # TextSTT
-Text image straightening
+Text image straightening.
 
 Before:
 ![Image text](https://github.com/robvasf/TextSTT/blob/master/Images/img3_before.jpg)
