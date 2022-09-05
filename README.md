@@ -1,10 +1,13 @@
 # TextSTT
 Text image straightening.
 
-Before:
+Example:
+[/TextSTT/Images/img3.jpg]
+
+Input:
 
 ![Image text](https://github.com/robvasf/TextSTT/blob/master/Images/img3_before.jpg)
 
-After:
+Output:
 
 ![Image text](https://github.com/robvasf/TextSTT/blob/master/Images/img3_after.jpg)
