@@ -33,6 +33,8 @@ def skew(img_path):
             cv.imshow("img_original", img_read)
             cv.waitKey()
             cv.destroyAllWindows()
+    else:
+        print("Invalid image:", img_name)
 
 
 def get_path():
