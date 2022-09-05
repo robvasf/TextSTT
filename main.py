@@ -22,7 +22,6 @@ def skew(img_path):
             dim = (width, height)
             img_temp = cv.resize(img_read, dim, interpolation=cv.INTER_AREA)
             img_skewed, h_ri, h_rf, v_ri, v_rf = rotate(img_temp, img_read)
-            
             img_skewed = img_skewed[h_ri:h_rf, v_ri:v_rf]
             
             # DEBUG
