@@ -1,5 +1,4 @@
 # TextSTT
-Text image straightening.
 
 Example:
 [/TextSTT/Images/img3.jpg]
