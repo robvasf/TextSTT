@@ -57,9 +57,7 @@ def rotate(img, real_img):
     for i in range(len(v_hist_list_reversed)-1):
         v_dif_reversed = abs(v_hist_list_reversed[i+1]-v_hist_list_reversed[i])
         if 0.6 < v_dif_reversed:
-            #print("Limit f:", h_dif_reversed, len(v_hist_list)-i+1)
             v_rf = (len(v_hist_list)-i+1)*10
-            #print("Limit f:", v_rf)
             break
 
     best_angle = angles[scores.index(max(scores))]

@@ -2,6 +2,7 @@ import cv2 as cv
 import wx
 import tqdm
 import os
+import sys
 import numpy as np
 from glob import glob
 from skew import rotate
@@ -40,14 +41,13 @@ def skew(img_path):
 def get_path():
     app = wx.App()
     img_dir = ""
-    dialog = wx.DirDialog(None, "Selecciona la carpeta de imágenes JPG a procesar:",
+    dialog = wx.DirDialog(None, "[JPG] Select a folder:",
                           style=wx.DD_DEFAULT_STYLE | wx.DD_NEW_DIR_BUTTON)
     if dialog.ShowModal() == wx.ID_OK:
         img_dir = (dialog.GetPath() + "/")
     else:
-        print("    │No se seleccionó ninguna carpeta.")
-        input("    │Proceso terminado. Presiona ENTER para salir.\n")
-        exit()
+        print("No folder selected.")
+        sys.exit()
     dialog.Destroy()
     return img_dir
 
