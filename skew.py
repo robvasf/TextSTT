@@ -12,7 +12,7 @@ def find_score(arr, angle):
 
 
 def rotate(img, real_img):
-    delta, limit = 0.5, 50
+    delta, limit = 0.5, 60
     angles = np.arange(-limit, limit + delta, delta)
     ht, wd = img.shape[:2]
     ht1, wd1 = real_img.shape[:2]
